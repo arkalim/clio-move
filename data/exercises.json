@@ -1,7 +1,9 @@
 [
   {
     "name": "Neck Roll",
+    "description": "This exercise helps to stretch the muscles in your neck and shoulders.",
     "image_url": "https://i0.wp.com/post.healthline.com/wp-content/uploads/2019/03/400x400_Exercises_to_Relieve_Upper_Back_Pain_Neck_Side_Bend_and_Rotation.gif?h=840",
+    "image_credit": "Gif by Active Body. Creative Mind.",
     "tags": ["neck", "upper back", "stretch"],
     "steps": [
       "Stand or sit with your back straight and shoulders relaxed.",
