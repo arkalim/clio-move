@@ -1,13 +1,7 @@
-import os
-from dotenv import load_dotenv
+from src.models.slack import Slack
+from src.models.exercise import Exercise
 
-from src.interfaces.slack import Slack
+exercise = Exercise()
+slack = Slack()
 
-load_dotenv()
-
-slack = Slack(os.getenv("SLACK_BOT_TOKEN"))
-
-users = slack.get_users()
-
-for user in users:
-  result = slack.send_message(user["id"],f"Hello, @{user['name']}!")
+slack.send_reminder("U07K8N96NDN", exercise.get_random())

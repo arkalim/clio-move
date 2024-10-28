@@ -1,8 +1,12 @@
+import os
+from dotenv import load_dotenv
 from slack_bolt import App
 
-class Slack:
-  def __init__(self, token):
-    self.app = App(token=token)
+load_dotenv()
+
+class SlackInterface:
+  def __init__(self):
+    self.app = App(token=os.getenv("SLACK_BOT_TOKEN"))
 
   def get_users(self):
     try:
@@ -15,5 +19,5 @@ class Slack:
       print(f"Failed to get users: {e}")
       return []
 
-  def send_message(self, channel, text):
-    return self.app.client.chat_postMessage(channel=channel, text=text)
+  def send_message(self, channel, blocks):
+    return self.app.client.chat_postMessage(channel=channel, blocks=blocks)
