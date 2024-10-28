@@ -8,7 +8,12 @@ exercise = Exercise()
 slack = Slack()
 
 db = DB()
-User.create("U07K8N96NDA", "abdur.rahman", "T07JYJP5M6D", -14400, "0 0 0 0 0")
+User.create(
+  id="U07K8N96NDN", 
+  name="abdur.rahman", 
+  tz_offset=-14400,
+  interval=45
+)
 
 print(len(User.get_all()))
 # User.update("U07K8N96NDN", name="sarthak")

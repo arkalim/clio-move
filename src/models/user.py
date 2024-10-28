@@ -1,17 +1,18 @@
+from datetime import datetime, timedelta
 from schema.user import User as UserModel
 from peewee import SqliteDatabase, Model, CharField, IntegerField
 
 class User:
   @staticmethod
-  def create(id, name, team_id, tz_offset, schedule):
+  def create(id, name, tz_offset, interval):
     if UserModel.select().where(UserModel.id == id).exists():
       return None
     return UserModel.create(
       id=id,
       name=name,
-      team_id=team_id,
       tz_offset=tz_offset,
-      schedule=schedule
+      interval=interval,
+      next_reminder_at=datetime.now() + timedelta(minutes=interval)
     )
 
   @staticmethod
