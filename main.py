@@ -10,24 +10,11 @@ app = Flask("Clio Move")
 
 exercise = Exercise()
 slack = Slack()
-
 db = DB()
-User.create(
-  id="U07K8N96NDN", 
-  name="abdur.rahman", 
-  tz_offset=-14400,
-  interval=45
-)
 
-print(len(User.get_all()))
-# User.update("U07K8N96NDN", name="sarthak")
-
-# print(User.get("U07K8N96NDN").name)
-
-# User.delete("U07K8N96NDN")
-
-db.disconnect()
-# slack.send_reminder("U07K8N96NDN", exercise.get_random())
+@app.teardown_appcontext
+def close_db(exception=None):
+  db.disconnect()
 
 @app.route('/')
 def home():
@@ -36,9 +23,7 @@ def home():
 
 @app.route('/command', methods=['POST'])
 def command():
-
-  data = request.form
-  response = slack.handle_command(data)
+  response = slack.handle_command(request.form)
   return jsonify(response)
 
 app.run(debug=True, port=8000, host="0.0.0.0")
