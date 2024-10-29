@@ -7,10 +7,68 @@
     "tags": ["neck", "upper back", "stretch"],
     "steps": [
       "Stand or sit with your back straight and shoulders relaxed.",
-      "Slowly lower your left ear toward your left shoulder.",
-      "Hold for 15-30 seconds.",
-      "Slowly return to the starting position.",
-      "Repeat on the other side."
+      "Slowly roll your head right to left and then back to right",
+      "When rolling to a side, make sure to continue looking ahead, not towards that side.",
+      "Repeat 10 times in each direction."
+    ]
+  },
+  {
+    "name": "Shoulder Roll",
+    "description": "This exercise helps to stretch the muscles in your upper back and shoulders.",
+    "image_url": "https://i0.wp.com/post.healthline.com/wp-content/uploads/2019/03/400x400_Exercises_to_Relieve_Upper_Back_Pain_Shoulder_Roll.gif?h=840",
+    "image_credit": "Gif by Active Body. Creative Mind.",
+    "tags": ["shoulders", "upper back", "stretch"],
+    "steps": [
+      "Stand or sit with your back straight and shoulders relaxed.",
+      "Roll your shoulders backward in a circular motion, completing 15 rotations.",
+      "Then, complete 15 rotations forward."
+    ]
+  },
+  {
+    "name": "Overhead Arm Reach",
+    "description": "This exercise helps to stretch the muscles in your upper back and shoulders.",
+    "image_url": "https://i0.wp.com/post.healthline.com/wp-content/uploads/2019/03/400x400_Exercises_to_Relieve_Upper_Back_Pain_Overhead_Arm_Reach.gif?h=840",
+    "image_credit": "Gif by Active Body. Creative Mind.",
+    "tags": ["shoulders", "upper back", "stretch"],
+    "steps": [
+      "Sit in a chair, facing forward, with your feet on the floor.",
+      "Extend your right arm above your head and reach to the left, bending your torso until you feel your right lat and shoulder stretch.",
+      "Hold for 10-15 seconds. Repeat on the other side."
+    ]
+  },
+  {
+    "name": "Thoracic Extension",
+    "description": "This exercise helps to stretch the muscles in your upper and mid back.",
+    "image_url": "https://i0.wp.com/post.healthline.com/wp-content/uploads/2019/03/400x400_Exercises_to_Relieve_Upper_Back_Pain_Thoracic_Extension.gif?h=840",
+    "image_credit": "Gif by Active Body. Creative Mind.",
+    "tags": ["mid back", "upper back", "stretch"],
+    "steps": [
+      "While seated on a chair, allow your upper body to fall over the back rest.",
+      "Extend your arms above your head for a deeper stretch.",
+      "Hold for 5-10 seconds. Repeat 3 times."
+    ]
+  },
+  {
+    "name": "Scapular Squeeze",
+    "description": "This exercise helps to stretch the muscles in your shoulders and upper back.",
+    "image_url": "https://i0.wp.com/post.healthline.com/wp-content/uploads/2019/03/400x400_Exercises_to_Relieve_Upper_Back_Pain_Scapular_Squeeze.gif?h=840",
+    "image_credit": "Gif by Active Body. Creative Mind.",
+    "tags": ["shoulders", "upper back", "stretch"],
+    "steps": [
+      "While standing, squeeze your shoulder blades together.",
+      "Hold for 5-10 seconds. Repeat 3 times."
+    ]
+  },
+  {
+    "name": "Upper Trapezius Stretch",
+    "description": "This exercise helps to stretch the muscles in your neck.",
+    "image_url": "https://i0.wp.com/post.healthline.com/wp-content/uploads/2022/02/HL-08.02.UpperTrapeziusStretch.gif?h=840",
+    "image_credit": "Gif by Dima Bazak",
+    "tags": ["neck", "stretch"],
+    "steps": [
+      "While standing or sitting in a chair, place your right hand on the left side of your head and tuck your left hand behind your back.",
+      "Gently pull your head to the right, stretching your neck.",
+      "Hold for 10-15 seconds. Repeat 3 times on each side."
     ]
   }
 ]
