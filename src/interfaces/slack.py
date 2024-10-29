@@ -24,3 +24,6 @@ class SlackInterface:
 
   def send_message(self, channel, blocks):
     return self.app.client.chat_postMessage(channel=channel, blocks=blocks)
+
+  def schedule_message(self, channel, blocks, timestamp):
+    return app.client.chat_scheduleMessage(channel=channel, blocks=blocks, post_at=timestamp)

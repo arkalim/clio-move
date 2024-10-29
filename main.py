@@ -7,7 +7,6 @@ from src.models.slack import Slack
 from src.models.exercise import Exercise
 from src.models.user import User
 
-
 app = Flask("Clio Move")
 
 exercise = Exercise()

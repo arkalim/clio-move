@@ -5,7 +5,7 @@ class Slack:
   def __init__(self):
     self.slack_interface = SlackInterface()
 
-  def send_reminder(self, channel, exercise):
+  def construct_reminder(self, exercise):
     steps_text = "\n".join(f"• {step}" for step in exercise["steps"])
     blocks = [
       {
@@ -30,12 +30,18 @@ class Slack:
         ]
       }
     ]
-    return self.slack_interface.send_message(channel, blocks)
+    return blocks
+
+  def send_reminder(self, channel, exercise):
+    return self.slack_interface.send_message(channel, self.construct_reminder(exercise))
+
+  def schedule_reminder(self, channel, exercise, time):
+    return self.slack_interface.schedule_message(channel, self.construct_reminder(exercise), int(time))
 
   def construct_reply(self, message, ephemeral=True):
     return {
-        "response_type": "ephemeral" if ephemeral else "in_channel",
-        "text": message
+      "response_type": "ephemeral" if ephemeral else "in_channel",
+      "text": message
     }
 
   def handle_command(self, data):
