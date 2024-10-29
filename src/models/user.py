@@ -16,6 +16,10 @@ class User:
     )
 
   @staticmethod
+  def exists(id):
+    return UserModel.select().where(UserModel.id == id).exists()
+
+  @staticmethod
   def get_all():
     return UserModel.select()
 

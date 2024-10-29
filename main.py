@@ -31,4 +31,14 @@ db.disconnect()
 
 @app.route('/')
 def home():
+  print("Hello")
   return "Hello, welcome to the API!"
+
+@app.route('/command', methods=['POST'])
+def command():
+
+  data = request.form
+  response = slack.handle_command(data)
+  return jsonify(response)
+
+app.run(debug=True, port=8000, host="0.0.0.0")

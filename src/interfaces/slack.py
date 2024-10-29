@@ -19,5 +19,8 @@ class SlackInterface:
       print(f"Failed to get users: {e}")
       return []
 
+  def get_user_info(self, id):
+    return self.app.client.users_info(user=id)
+
   def send_message(self, channel, blocks):
     return self.app.client.chat_postMessage(channel=channel, blocks=blocks)
