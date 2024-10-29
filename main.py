@@ -1,10 +1,12 @@
-from src.interfaces.db import DB
+import threading
+from flask import Flask, jsonify, request
 
+from src.utils.scheduler import start_scheduler_thread
+from src.interfaces.db import DB
 from src.models.slack import Slack
 from src.models.exercise import Exercise
 from src.models.user import User
 
-from flask import Flask, jsonify, request
 
 app = Flask("Clio Move")
 
@@ -26,4 +28,6 @@ def command():
   response = slack.handle_command(request.form)
   return jsonify(response)
 
-app.run(debug=True, port=8000, host="0.0.0.0")
+if __name__ == "__main__":
+  start_scheduler_thread()
+  app.run(debug=True, use_reloader=False, port=8000, host="0.0.0.0")
