@@ -1,8 +1,8 @@
 import json
 
 class Exercise:
-  def __init__(self):
-    self.exercises = json.load(open("data/exercises.json"))
+  exercises = json.load(open("data/exercises.json"))
 
+  @classmethod
   def get_random(self):
     return self.exercises[0]

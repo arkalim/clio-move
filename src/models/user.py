@@ -3,9 +3,9 @@ from schema.user import User as UserModel
 from peewee import SqliteDatabase, Model, CharField, IntegerField
 
 class User:
-  @staticmethod
+  @classmethod
   def create(id, name, tz_offset, interval):
-    if UserModel.select().where(UserModel.id == id).exists():
+    if cls.exists():
       return None
     return UserModel.create(
       id=id,
@@ -26,6 +26,10 @@ class User:
   @staticmethod
   def get(id):
     return UserModel.get(UserModel.id == id)
+
+  @staticmethod
+  def get_expired():
+    return UserModel.select().where(UserModel.next_reminder_at < datetime.now())
 
   @staticmethod
   def update(id, **kwargs):

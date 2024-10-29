@@ -4,12 +4,9 @@ from flask import Flask, jsonify, request
 from src.utils.scheduler import start_scheduler_thread
 from src.interfaces.db import DB
 from src.models.slack import Slack
-from src.models.exercise import Exercise
-from src.models.user import User
 
 app = Flask("Clio Move")
 
-exercise = Exercise()
 slack = Slack()
 db = DB()
 

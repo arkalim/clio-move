@@ -32,11 +32,11 @@ class Slack:
     ]
     return blocks
 
-  def send_reminder(self, channel, exercise):
-    return self.slack_interface.send_message(channel, self.construct_reminder(exercise))
+  def send_reminder(self, user_id, exercise):
+    return self.slack_interface.send_message(user_id, self.construct_reminder(exercise))
 
-  def schedule_reminder(self, channel, exercise, time):
-    return self.slack_interface.schedule_message(channel, self.construct_reminder(exercise), int(time))
+  def schedule_reminder(self, user_id, exercise, time):
+    return self.slack_interface.schedule_message(user_id, self.construct_reminder(exercise), time.timestamp())
 
   def construct_reply(self, message, ephemeral=True):
     return {
