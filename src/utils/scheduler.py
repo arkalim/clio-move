@@ -10,15 +10,15 @@ from src.models.exercise import Exercise
 slack = Slack()
 
 def schedule_reminders():
-  for user in User.get_expired():
-    exercise = Exercise.get_random()
-    next_reminder_at = user.next_reminder_at + timedelta(user.interval)
-    slack.schedule_reminder(user.id, exercise, next_reminder_at)
-    User.update(user.id, next_reminder_at=next_reminder_at)
-    time.sleep(2)
+  exercise = Exercise.get_random()
+  print(f"Scheduling reminders for exercise: {exercise["name"]}")
+  for user in User.get_all():
+    slack.send_reminder(user.id, exercise)
+    print(f"Sent reminder to {user.name}")
+    time.sleep(1)
 
 def run_scheduler():
-  schedule.every(10).seconds.do(schedule_reminders)
+  schedule.every(30).minutes.do(schedule_reminders)
   while True:
     schedule.run_pending()
     time.sleep(1)
