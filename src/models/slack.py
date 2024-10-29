@@ -9,7 +9,9 @@ class Slack:
   def construct_reminder(self, exercise):
     steps_text = "\n".join(f"• {step}" for step in exercise["steps"])
     blocks = [
-      SlackBlock.text(f"*{exercise['name']}*\n{exercise['description']}\n\n*Steps:*\n{steps_text}"),
+      SlackBlock.text(f"*{exercise['name']}*"),
+      SlackBlock.text(f"{exercise['description']}"),
+      SlackBlock.text(f"*Steps:*\n{steps_text}"),
       SlackBlock.image(exercise["image_url"], f"{exercise["name"]} Image"),
       SlackBlock.context(exercise["image_credit"])
     ]
