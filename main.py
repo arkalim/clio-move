@@ -4,6 +4,10 @@ from src.models.slack import Slack
 from src.models.exercise import Exercise
 from src.models.user import User
 
+from flask import Flask, jsonify, request
+
+app = Flask("Clio Move")
+
 exercise = Exercise()
 slack = Slack()
 
@@ -24,3 +28,9 @@ print(len(User.get_all()))
 
 db.disconnect()
 # slack.send_reminder("U07K8N96NDN", exercise.get_random())
+
+@app.route('/')
+def home():
+  return "Hello, welcome to the API!"
+
+app.run(debug=True)
