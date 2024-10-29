@@ -3,8 +3,8 @@ from schema.user import User as UserModel
 
 class User:
   @classmethod
-  def create(id, name, tz_offset):
-    if cls.exists():
+  def create(cls, id, name, tz_offset):
+    if cls.exists(id):
       return None
     return UserModel.create(
       id=id,

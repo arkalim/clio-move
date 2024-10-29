@@ -62,7 +62,6 @@ class Slack:
         id=user["id"], 
         name=user["name"], 
         tz_offset=user["tz_offset"],
-        interval=45
       )
       return self.construct_reply("Clio Move enabled!")
 

@@ -5,5 +5,5 @@ class Exercise:
   exercises = json.load(open("data/exercises.json"))
 
   @classmethod
-  def get_random(self):
+  def get_random(cls):
     return random.choice(cls.exercises)
