@@ -18,7 +18,7 @@ def schedule_reminders():
     time.sleep(1)
 
 def run_scheduler():
-  schedule.every(30).minutes.do(schedule_reminders)
+  schedule.every(1).minutes.do(schedule_reminders)
   while True:
     schedule.run_pending()
     time.sleep(1)

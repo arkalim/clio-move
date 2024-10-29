@@ -11,6 +11,14 @@ class SlackBlock:
     }
 
   @staticmethod
+  def image(url, alt_text):
+    return {
+      "type": "image",
+      "image_url": url,
+      "alt_text": alt_text
+    }
+
+  @staticmethod
   def divider():
     return {
       "type": "divider"
@@ -33,4 +41,16 @@ class SlackBlock:
       },
       "style": style,
       "action_id": action_id
+    }
+
+  @staticmethod
+  def context(text):
+    return {
+      "type": "context",
+      "elements": [
+        {
+          "type": "mrkdwn",
+          "text": text
+        }
+      ]
     }
