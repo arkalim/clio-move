@@ -1,3 +1,4 @@
+import json
 import threading
 from flask import Flask, jsonify, request
 
@@ -22,6 +23,12 @@ def command():
 @app.route('/event', methods=['POST'])
 def event():
   response = slack.handle_event(request.get_json())
+  return jsonify(response) if response else jsonify({"status": "ok"})
+
+@app.route('/interaction', methods=['POST'])
+def interaction():
+  payload = json.loads(request.form.get("payload"))
+  response = slack.handle_interaction(payload)
   return jsonify(response) if response else jsonify({"status": "ok"})
 
 if __name__ == "__main__":

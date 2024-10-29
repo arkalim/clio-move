@@ -27,36 +27,33 @@ class Slack:
       "text": message
     }
 
+  def enable_user(self, user_id):
+    if User.exists(user_id):
+      return False
+
+    user = self.slack_interface.get_user_info(user_id)["user"]
+    if user["is_bot"]:
+      return False
+    
+    User.create(
+      id=user["id"], 
+      name=user["name"], 
+      tz_offset=user["tz_offset"],
+    )
+    return True
+
+  def disable_user(self, user_id):
+    if not User.exists(user_id):
+      return False
+    User.delete(user_id)
+    return True
+
+  def load_home_tab(self, user_id):
+    self.slack_interface.publish_view(user_id, self.construct_home_tab(User.exists(user_id)))
+
   def handle_command(self, data):
     command = data["text"]
     message = "Unsupported command!!!"
-
-    if command == "enable":
-      user_id = data["user_id"]
-
-      if User.exists(user_id):
-        return self.construct_reply("Clio Move is already enabled for you.")
-
-      user = self.slack_interface.get_user_info(user_id)["user"]
-      if user["is_bot"]:
-        return self.construct_reply("You are a bot, haha!!!")
-      
-      User.create(
-        id=user["id"], 
-        name=user["name"], 
-        tz_offset=user["tz_offset"],
-      )
-      return self.construct_reply("Clio Move enabled!")
-
-    elif command == "disable":
-      user_id = data["user_id"]
-
-      if not User.exists(user_id):
-        return self.construct_reply("Clio Move is already disabled for you.")
-
-      User.delete(user_id)
-      return self.construct_reply("Clio Move disabled!")
-
     return self.construct_reply(message)
 
   def handle_event(self, data):
@@ -70,9 +67,38 @@ class Slack:
 
       if event_type == "app_home_opened":
         user_id = data["event"]["user"]
-        self.slack_interface.publish_view(user_id, self.construct_home_tab(User.exists(user_id)))
+        self.load_home_tab(user_id)
+
+  def handle_interaction(self, data):
+    user_id = data["user"]["id"]
+    actions = data["actions"]
+
+    for action in actions:
+      action_id = action["action_id"]
+
+      if action_id == "enable":
+        if self.enable_user(user_id):
+          self.load_home_tab(user_id)
+
+      elif action_id == "disable":
+        if self.disable_user(user_id):
+          self.load_home_tab(user_id)
+
   
   def construct_home_tab(self, enabled):
+    if enabled:
+      return {
+        "type": "home",
+        "blocks": [
+          SlackBlock.text("*Welcome to Clio Move!* :wave:\n You're all set! This app will send periodic reminders every hour to stretch, walk, or do quick exercises throughout your workday."),
+          SlackBlock.divider(),
+          SlackBlock.text("If you're not enjoying the app, feel free to disable it using the button below."),
+          SlackBlock.actions([
+            SlackBlock.button("Disable", "disable", "danger")
+          ])
+        ]
+      }
+
     return {
       "type": "home",
       "blocks": [
