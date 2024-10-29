@@ -1,5 +1,6 @@
 from src.interfaces.slack import SlackInterface
 from src.models.user import User
+from src.utils.slack import SlackBlock
 
 class Slack:
   def __init__(self):
@@ -75,3 +76,28 @@ class Slack:
       return self.construct_reply("Clio Move disabled!")
 
     return self.construct_reply(message)
+
+  def handle_event(self, data):
+    event_category = data["type"]
+
+    if event_category == "url_verification":
+      return { "challenge": data["challenge"] }
+
+    elif event_category == "event_callback":
+      event_type = data["event"]["type"]
+
+      if event_type == "app_home_opened":
+        user_id = data["event"]["user"]
+        self.slack_interface.publish_view(user_id, self.construct_home_tab(User.exists(user_id)))
+  
+  def construct_home_tab(self, enabled):
+    return {
+      "type": "home",
+      "blocks": [
+        SlackBlock.text("*Welcome to Clio Move!* :wave:\nEnable this app to receive periodic reminders to stretch, walk, or do quick exercises throughout your workday."),
+        SlackBlock.divider(),
+        SlackBlock.actions([
+          SlackBlock.button("Enable", "enable", "primary")
+        ])
+      ]
+    }

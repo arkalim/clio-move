@@ -27,3 +27,6 @@ class SlackInterface:
 
   def schedule_message(self, channel, blocks, timestamp):
     return self.app.client.chat_scheduleMessage(channel=channel, blocks=blocks, text="", post_at=int(timestamp))
+
+  def publish_view(self, user_id, view):
+    return self.app.client.views_publish(user_id=user_id, view=view)

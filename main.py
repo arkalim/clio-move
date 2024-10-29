@@ -14,15 +14,15 @@ db = DB()
 def close_db(exception=None):
   db.disconnect()
 
-@app.route('/')
-def home():
-  print("Hello")
-  return "Hello, welcome to the API!"
-
 @app.route('/command', methods=['POST'])
 def command():
   response = slack.handle_command(request.form)
   return jsonify(response)
+
+@app.route('/event', methods=['POST'])
+def event():
+  response = slack.handle_event(request.get_json())
+  return jsonify(response) if response else jsonify({"status": "ok"})
 
 if __name__ == "__main__":
   start_scheduler_thread()
