@@ -32,5 +32,3 @@ db.disconnect()
 @app.route('/')
 def home():
   return "Hello, welcome to the API!"
-
-app.run(debug=True)
