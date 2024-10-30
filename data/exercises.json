@@ -3,7 +3,7 @@
     "name": "Neck Roll",
     "description": "This exercise helps to stretch the muscles in your neck and shoulders.",
     "image_url": "https://i0.wp.com/post.healthline.com/wp-content/uploads/2019/03/400x400_Exercises_to_Relieve_Upper_Back_Pain_Neck_Side_Bend_and_Rotation.gif?h=840",
-    "image_credit": "Gif by Active Body. Creative Mind.",
+    "image_credit": "Gif by Active Body Creative Mind",
     "tags": ["neck", "upper back", "stretch"],
     "steps": [
       "Stand or sit with your back straight and shoulders relaxed.",
@@ -16,7 +16,7 @@
     "name": "Shoulder Roll",
     "description": "This exercise helps to stretch the muscles in your upper back and shoulders.",
     "image_url": "https://i0.wp.com/post.healthline.com/wp-content/uploads/2019/03/400x400_Exercises_to_Relieve_Upper_Back_Pain_Shoulder_Roll.gif?h=840",
-    "image_credit": "Gif by Active Body. Creative Mind.",
+    "image_credit": "Gif by Active Body Creative Mind",
     "tags": ["shoulders", "upper back", "stretch"],
     "steps": [
       "Stand or sit with your back straight and shoulders relaxed.",
@@ -28,7 +28,7 @@
     "name": "Overhead Arm Reach",
     "description": "This exercise helps to stretch the muscles in your upper back and shoulders.",
     "image_url": "https://i0.wp.com/post.healthline.com/wp-content/uploads/2019/03/400x400_Exercises_to_Relieve_Upper_Back_Pain_Overhead_Arm_Reach.gif?h=840",
-    "image_credit": "Gif by Active Body. Creative Mind.",
+    "image_credit": "Gif by Active Body Creative Mind",
     "tags": ["shoulders", "upper back", "stretch"],
     "steps": [
       "Sit in a chair, facing forward, with your feet on the floor.",
@@ -40,7 +40,7 @@
     "name": "Thoracic Extension",
     "description": "This exercise helps to stretch the muscles in your upper and mid back.",
     "image_url": "https://i0.wp.com/post.healthline.com/wp-content/uploads/2019/03/400x400_Exercises_to_Relieve_Upper_Back_Pain_Thoracic_Extension.gif?h=840",
-    "image_credit": "Gif by Active Body. Creative Mind.",
+    "image_credit": "Gif by Active Body Creative Mind",
     "tags": ["mid back", "upper back", "stretch"],
     "steps": [
       "While seated on a chair, allow your upper body to fall over the back rest.",
@@ -52,7 +52,7 @@
     "name": "Scapular Squeeze",
     "description": "This exercise helps to stretch the muscles in your shoulders and upper back.",
     "image_url": "https://i0.wp.com/post.healthline.com/wp-content/uploads/2019/03/400x400_Exercises_to_Relieve_Upper_Back_Pain_Scapular_Squeeze.gif?h=840",
-    "image_credit": "Gif by Active Body. Creative Mind.",
+    "image_credit": "Gif by Active Body Creative Mind",
     "tags": ["shoulders", "upper back", "stretch"],
     "steps": [
       "While standing, squeeze your shoulder blades together.",
@@ -69,6 +69,91 @@
       "While standing or sitting in a chair, place your right hand on the left side of your head and tuck your left hand behind your back.",
       "Gently pull your head to the right, stretching your neck.",
       "Hold for 10-15 seconds. Repeat 3 times on each side."
+    ]
+  },
+  {
+    "name": "Seated Glute Stretch",
+    "description": "This exercise helps to stretch your glutes.",
+    "image_url": "https://post.healthline.com/wp-content/uploads/2023/06/400x400_Stretches_for_Sciatica_Pain_Relief_Seated_Glute_Stretch.gif",
+    "image_credit": "Gif by Goodboy Picture Company",
+    "tags": ["neck", "stretch"],
+    "steps": [
+      "While seated in your chair, put your right ankle on top of your left knee.",
+      "While keeping your back straight, bend your upper body towards until you feel a deep stretch in your right glute.",
+      "Hold for 10-15 seconds. Repeat 3 times on each side."
+    ]
+  },
+  {
+    "name": "Sitting Spinal Twist",
+    "description": "This exercise helps create space in the spine to relieve pressure on the sciatic nerve.",
+    "image_url": "https://post.healthline.com/wp-content/uploads/2022/10/400x400_9_Stretches_for_Sciatica_Pain_Relief_Sitting_Spinal_Stretch.gif",
+    "image_credit": "Gif by Active Body Creative Mind",
+    "tags": ["neck", "stretch"],
+    "steps": [
+      "White sitting on the ground with your legs extended straight out, bend your left knee and place your left foot on the outer side of your right leg.",
+      "Place your right elbow on the outer side of your left knee, pushing it towards the right. This will twist your upper body to the left and your lower body to the right.",
+      "Hold for 15 seconds. Repeat 3 times on each side."
+    ]
+  },
+  {
+    "name": "Scissor Hamstring Stretch",
+    "description": "This exercise helps loosen the hamstring muscles that become tight due to our sedantry lifestyle.",
+    "image_url": "https://post.healthline.com/wp-content/uploads/2022/10/400x400_9_Stretches_for_Sciatica_Pain_Relief_Scissor_Hamstring_Stretch.gif",
+    "image_credit": "Gif by Active Body Creative Mind",
+    "tags": ["neck", "stretch"],
+    "steps": [
+      "Stand with one leg in front of the other. Put your hands on your hips and bend your torso over from your hips, while keeping your back straight.",
+      "You should feel a deep stretch in the hamstring of the leg in front.",
+      "Hold for 15 seconds. Repeat 3 times on each side."
+    ]
+  },
+  {
+    "name": "Butterfly Stretch",
+    "description": "This exercise helps stretch the hip adductor muscles.",
+    "image_url": "https://post.healthline.com/wp-content/uploads/2018/09/Butterfly-stretch.gif",
+    "image_credit": "Gif by Active Body Creative Mind",
+    "tags": ["hip", "adductors", "stretch"],
+    "steps": [
+      "Sit on the ground, bend your knees, and bring the soles of your feet together so they touch, letting your knees fall out to the sides.",
+      "Bring your heels as close to your body and lean forward into the stretch, using your elbows to gently push your knees toward the ground.",
+      "Hold for 15 seconds. Repeat 3 times"
+    ]
+  },
+  {
+    "name": "Squats",
+    "description": "This exercise helps strengthen the quadriceps and glutes.",
+    "image_url": "https://post.healthline.com/wp-content/uploads/2023/05/Squats.gif",
+    "image_credit": "Gif by Active Body Creative Mind",
+    "tags": ["thigh", "glutes", "legs", "stretch"],
+    "steps": [
+      "Stand with your feet shoulder-width apart and put your arms out in front for balance.",
+      "Lower yourself, while keeping your spine straight, until your thighs are parallel with the floor.",
+      "Do 10-15 repetitions."
+    ]
+  },
+  {
+    "name": "Quad Stretch",
+    "description": "This exercise helps stretch the quadriceps (muscle group in the front of your thigh).",
+    "image_url": "https://images-prod.healthline.com/hlcmsresource/images/topic_centers/Fitness-Exercise/400x400_4_Leg_Stretches_for_Flexibility_Quad_Stretch.gif",
+    "image_credit": "Gif by Active Body Creative Mind",
+    "tags": ["quad", "thigh", "stretch"],
+    "steps": [
+      "Bend your right knee while standing. Optionally use a wall for support.",
+      "Hold your right foot with your right hand and pull up until the foot touches your butt.",
+      "You should feel a stretch in the front of your right thigh.",
+      "Hold for 15 seconds. Repeat 3 times on each side."
+    ]
+  },
+  {
+    "name": "Doorway Stretch",
+    "description": "This exercise helps stretch your chest muscles for increased mobility.",
+    "image_url": "https://images.squarespace-cdn.com/content/v1/5a620a85d55b41e7233c5243/cca9b16c-e3b1-42c3-8ded-ddeb410775ba/download.gif?format=2500w",
+    "image_credit": "Gif by Active Body Creative Mind",
+    "tags": ["chest", "stretch"],
+    "steps": [
+      "Stand in a doorway with your feet together. Bend your elbows and place your forearms on the doorframe, ensuring your elbows are at shoulder height.",
+      "Move forward and lean into the doorframe until you feel a stretch in your chest. Keep your back straight and avoid excessive arching in the lower back.",
+      "Hold for 15 seconds. Repeat 3 times."
     ]
   }
 ]
