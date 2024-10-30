@@ -11,11 +11,16 @@ class SlackBlock:
     }
 
   @staticmethod
-  def image(url, alt_text):
+  def image(url, title):
     return {
       "type": "image",
       "image_url": url,
-      "alt_text": alt_text
+      "alt_text": title,
+      "title": {
+				"type": "plain_text",
+				"text": title,
+				"emoji": True
+			},
     }
 
   @staticmethod
@@ -51,6 +56,11 @@ class SlackBlock:
         {
           "type": "mrkdwn",
           "text": text
-        }
+        },
+        {
+					"type": "plain_text",
+					"text": "Made with 💙 by Abdur Rahman",
+					"emoji": True
+				}
       ]
     }
