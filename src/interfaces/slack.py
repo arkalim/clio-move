@@ -2,6 +2,8 @@ import os
 from dotenv import load_dotenv
 from slack_bolt import App
 
+from src.utils.logger import logger
+
 load_dotenv()
 
 class SlackInterface:
@@ -16,7 +18,7 @@ class SlackInterface:
       filtered_humans = [{"name": user["name"], "id": user["id"], "team_id": user["team_id"]} for user in active_humans]
       return filtered_humans
     except Exception as e:
-      print(f"Failed to get users: {e}")
+      logger.error(f"Failed to get users: {e}")
       return []
 
   def get_user_info(self, id):
