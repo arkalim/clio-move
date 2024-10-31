@@ -5,5 +5,9 @@ class Exercise:
   exercises = json.load(open("data/exercises.json"))
 
   @classmethod
-  def get_random(cls):
-    return random.choice(cls.exercises)
+  def generate(cls):
+    while True:
+      sequence = cls.exercises.copy()
+      random.shuffle(sequence)
+      for exercise in sequence:
+        yield exercise

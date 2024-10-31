@@ -8,13 +8,14 @@ from src.models.slack import Slack
 from src.models.exercise import Exercise
 
 slack = Slack()
+exercise_generator = Exercise.generate()
 
 START_WORK_HOUR = 9
 END_WORK_HOUR = 17
 
 def schedule_reminders():
   try:
-    exercise = Exercise.get_random()
+    exercise = next(exercise_generator)
     print(f"Scheduling reminders for exercise: {exercise["name"]}")
     for user in User.get_all():
       try:
