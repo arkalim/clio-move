@@ -91,9 +91,10 @@ class Slack:
       return {
         "type": "home",
         "blocks": [
-          SlackBlock.text("*Welcome to Clio Move!* :wave:\n You're all set! This app will send periodic reminders every hour to stretch, walk, or do quick exercises throughout your workday."),
+          SlackBlock.text(":wave: *Welcome to Clio Move*"),
+          SlackBlock.text("You're all set to receive hourly reminders during your work hours to take a break, stretch, and keep your body happy. Each reminder comes with easy-to-follow steps and a quick gif so you can follow along."),
           SlackBlock.divider(),
-          SlackBlock.text("If you're not enjoying the app, feel free to disable it using the button below."),
+          SlackBlock.text("If you wish to not receive further reminders, feel free to disable the app!"),
           SlackBlock.actions([
             SlackBlock.button("Disable", "disable", "danger")
           ])
@@ -103,8 +104,11 @@ class Slack:
     return {
       "type": "home",
       "blocks": [
-        SlackBlock.text("*Welcome to Clio Move!* :wave:\nEnable this app to receive periodic reminders to stretch, walk, or do quick exercises throughout your workday."),
+        SlackBlock.text(":wave: *Welcome to Clio Move*"),
+        SlackBlock.text("We all know how easy it is to stay glued to the screen for hours 🧑🏽‍💻, but taking regular breaks and moving is crucial. Staying active while working improves circulation, reduces stress, and helps prevent stiffness and fatigue from sitting all day. With Clio Move, you get gentle, hourly reminders during your work hours to take a break, stretch, and keep your body happy. Each reminder comes with easy-to-follow steps and a quick gif so you can follow along."),
+        SlackBlock.text("🚀 Stay focused, stay healthy, and let Clio Move bring balance to your workday, one stretch at a time!"),
         SlackBlock.divider(),
+        SlackBlock.text("Enable the app to get started!"),
         SlackBlock.actions([
           SlackBlock.button("Enable", "enable", "primary")
         ])
